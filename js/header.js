@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const footerContainer = document.getElementById('footer-container');
 
     // PC版のヘッダーとフッターのURL
-    const pcHeaderUrl = 'https://ask-web.github.io/STEM/header.html';
-    const pcFooterUrl = 'https://ask-web.github.io/STEM/footer.html';
+    const pcHeaderUrl = 'https://ootomonaiso.github.io/stemtest/header.html';
+    const pcFooterUrl = 'https://ootomonaiso.github.io/stemtest/footer.html';
 
     // ヘッダーを読み込む
     fetch(pcHeaderUrl) // PC版のみ
