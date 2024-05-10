@@ -1,33 +1,64 @@
-/*ヘッダー用のCSS*/
-.header {
-    text-align: left; /* 左揃え */
-    font-size: 1.5em; /* 文字サイズを調整 */
-    background-color: #f0f0f0; /* ヘッダーの背景色 */
-}
-
-/* ルビのスタイル設定 */
-ruby rt {
-    font-size: 0.8em; /* ルビのサイズを調整 */
-}
-
-/* 小さなテキストのスタイル設定 */
-small {
-    font-size: 0.8em;
-}
-
-/*リンクパス列挙用*/
-.nav {
-    display: flex;
-}
-
-/*メニューのリンク後で変える*/
-.nav a {
-    color: white;
+body {
+    font-family: sans-serif;
+    color: #565656;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ a {
     text-decoration: none;
+    color: #036EB8;
     padding: 10px;
-    margin: 0 10px;
-}
-
-.button{
-    float: left;
-}
+    text-align: center;
+ }
+ 
+ a:hover {
+    color: #ff8c00;
+ }
+ 
+ /* ヘッダーのスタイル */
+ .header {
+    background-color: #fff;
+    padding: 20px;
+ }
+ 
+ .header h1 {
+    font-size: 1.5em;
+ }
+ 
+ .top-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+ }
+ 
+ .nav-list {
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ .nav-list a {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+ }
+ 
+ /* レスポンシブ対応 */
+ @media (max-width: 767px) {
+    .header {
+       text-align: center;
+    }
+ 
+    .top-list {
+       flex-direction: column;
+    }
+ 
+    .nav-list {
+       flex-direction: column;
+    }
+ 
+    .nav-list a {
+       padding: 10px;
+    }
+ }
