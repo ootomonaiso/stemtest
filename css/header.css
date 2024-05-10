@@ -1,65 +1,32 @@
-/* 基本スタイル */
-body {
-    font-family: sans-serif;
-    color: #565656;
-    line-height: 1.7;
-    margin: 0;
-    padding: 0;
- }
- 
- /* リンクのスタイル */
- a {
-    text-decoration: underline; /* 下線 */
-    color: #036EB8; /* 青色 */
-    padding: 10px 15px; /* 余白 */
-    border: 2px solid transparent; /* ボーダーを透明に */
-    transition: 0.3s; /* トランジション効果 */
- }
- 
- a:hover {
-    color: #ff8c00; /* ホバー時の色 */
-    border: 2px solid #036EB8; /* ボーダーを表示 */
-    background-color: #e0f7fa; /* 背景色の変化 */
-    text-decoration: none; /* ホバー時に下線を消す */
- }
- 
- /* ヘッダーのスタイル */
- .header {
-    background-color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; /* 横方向の配置 */
-    align-items: center; /* 縦方向の配置 */
- }
- 
- .header h1 {
-    font-size: 1.5em;
-    margin: 0;
- }
- 
- /* リンクの配置スタイル */
- .nav {
-    display: flex;
-    justify-content: space-between; /* 横方向の均等配置 */
- }
- 
- .nav a {
-    text-align: center;
-    padding: 10px; /* ボタンの内側の余白 */
- }
- 
- /* レスポンシブ対応 */
- @media (max-width: 767px) {
-    .header {
-       flex-direction: column; /* 縦方向の配置 */
-       align-items: center; /* 中央に配置 */
-    }
- 
-    .nav {
-       flex-direction: column; /* リンクを縦方向に配置 */
-    }
- 
-    .nav a {
-       width: 100%; /* リンクを全幅に */
-    }
- }
+
+/*ナビゲーション部分ここから*/
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu {
+   display: flex;
+}
+
+.menu a {
+   text-decoration: none;
+   padding: 10px;
+   margin: 0 10px;
+   float: left;
+   color: #036EB8;
+   /*.nav-itemのコピペ*/
+   width: 20%;
+   overflow: hidden;
+   box-sizing: border-box;
+   padding: 10px 0;
+   position: relative;
+   top: 0;
+   left: 0;
+}
+
+.menu:hover{
+   overflow: visible;
+}
+/*ナビゲーション部分ここまで*/
