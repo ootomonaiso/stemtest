@@ -1,52 +1,53 @@
 /* ヘッダー全体の設定 */
 header {
-   display: flex;                  /* 横方向のフレックスボックスを使用 */
-   flex-direction: column;         /* 要素を縦方向に配置 */
-   justify-content: flex-start;    /* 最初の要素を左側に配置 */
-   align-items: stretch;           /* 横幅いっぱいに広げる */
-}
-
-/* ヘッダー上部の設定 */
-.header-top {
-   display: flex;                  /* フレックスボックス */
-   justify-content: space-between; /* 要素を左右に配置 */
-   align-items: center;            /* 垂直方向の中央に配置 */
+   display: flex;                  /* ヘッダー全体をフレックスボックスとして設定 */
+   flex-direction: column;         /* 縦方向に要素を配置 */
    padding: 10px;                  /* 全体のパディング */
    border-bottom: 1px solid #ccc;  /* セクションの境界を示すための線 */
 }
 
+/* ヘッダーの上部の設定 */
+.header-top {
+   display: flex;                  /* フレックスボックスで要素を横に配置 */
+   justify-content: space-between; /* 左右に配置 */
+   align-items: center;            /* 垂直方向で中央に揃える */
+   padding: 10px;                  /* 全体のパディング */
+}
+
 /* h1要素の設定 */
 .header-top h1 {
-   margin: 0;         /* デフォルトのマージンを取り除く */
-   font-size: 1.5em;  /* フォントサイズを設定 */
+   font-size: 1.5em;               /* フォントサイズを設定 */
+   margin: 0;                      /* デフォルトのマージンを取り除く */
+   text-align: left;               /* 左揃え */
 }
 
-/* sub-menuの設定 */
+/* サブメニューの設定 */
 .sub-menu {
-   font-size: 12px;          /* サブメニューのフォントサイズ */
-   margin: 0 auto 6px;       /* 下部に6pxの余白 */
-   width: auto;              /* コンテナ内で自動調整 */
+   display: flex;                  /* フレックスボックスで要素を横に配置 */
+   justify-content: flex-end;      /* 要素を右端に揃える */
+   align-items: center;            /* 垂直方向で中央に揃える */
+   padding: 0;                     /* パディングを取り除く */
 }
 
+/* サブメニューのリンクの設定 */
 .sub-menu a {
-   float: right;             /* アンカータグを右側にフロート */
-   padding: 10px;            /* パディングの追加 */
-   color: #036EB8;           /* テキストの色 */
+   text-decoration: none;          /* テキストの下線を取り除く */
+   color: #036EB8;                 /* テキストの色 */
+   padding: 0 10px;                /* 左右のパディング */
 }
 
-/* ヘッダーの下に配置されるメニュー */
+/* ヘッダーの下部の設定 */
 .header-bottom {
-   display: flex;                  /* フレックスボックス */
-   justify-content: space-between; /* 要素を横方向に配置 */
+   display: flex;                  /* フレックスボックスで要素を横に配置 */
+   justify-content: space-between; /* 要素を左右に配置 */
    padding: 10px;                  /* 全体のパディング */
    border-top: 1px solid #ccc;     /* セクションの境界を示すための線 */
 }
 
-/* メニューのリンク設定 */
+/* メニューのリンクの設定 */
 .menu a {
-   text-decoration: none;          /* 下線を取り除く */
+   text-decoration: none;          /* テキストの下線を取り除く */
    color: #036EB8;                 /* テキストの色 */
-   padding: 10px;                  /* パディングの意味よくわからんけどとりあえずつけた */
-   margin: 0 10px;                 /* 左右に余白 */
-   float: left;                    /* 左側そろえ */
+   padding: 10px;                  /* パディング */
+   margin: 0 10px;                 /* 左右の余白 */
 }
