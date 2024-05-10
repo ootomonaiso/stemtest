@@ -2,7 +2,6 @@
 .header {
     text-align: left; /* 左揃え */
     font-size: 1.5em; /* 文字サイズを調整 */
-    padding: 10px; /* 余白を追加 */
     background-color: #f0f0f0; /* ヘッダーの背景色 */
 }
 
