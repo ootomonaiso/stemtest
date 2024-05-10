@@ -1,9 +1,19 @@
+/*横のボタンリンク部分ここから*/
+.sub-menu {
+   font-size: 12px;          /* サブメニューのフォントサイズを12pxに設定 */
+   margin: 0 auto 6px;       /* 上部は0、左右は中央寄せ、下部に6pxの余白 */
+   width: 93%;               /* サブメニューの幅を全体の93%に設定 */
+}
+
+.sub-menu a {
+   float: right;             /* アンカータグを右側にフロートさせる */
+}
 
 /*ナビゲーション部分ここから*/
-nav {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+header {
+   display: flex;                  /* ヘッダー要素をフレックスボックスに設定 */
+   justify-content: space-between; /* コンテンツを水平方向に両端へ配置 */
+   align-items: center;            /* コンテンツを垂直方向の中央に配置 */
 }
 
 .menu {
@@ -11,22 +21,22 @@ nav {
 }
 
 .menu a {
-   text-decoration: none;
-   padding: 10px;
-   margin: 0 10px;
-   float: left;
-   color: #036EB8;
-   /*.nav-itemのコピペ*/
-   width: 20%;
-   overflow: hidden;
-   box-sizing: border-box;
-   padding: 10px 0;
-   position: relative;
-   top: 0;
-   left: 0;
+   text-decoration: none;  /* アンカータグのデフォルトの下線を取り除く */
+   padding: 10px;          /* 内部のパディングを10pxに設定 */
+   margin: 0 10px;         /* 左右に10pxの外部余白を追加 */
+   float: left;            /* 要素を左にフロートさせる */
+   color: #036EB8;         /* 文字の色を青に設定 */
+   /* .nav-itemのスタイルをコピー */
+   width: 20%;             /* 幅を全体の20%に設定 */
+   overflow: hidden;       /* コンテンツがオーバーフローした場合に非表示 */
+   box-sizing: border-box; /* パディングとボーダーを含むようにボックスサイズを設定 */
+   padding: 10px 0;        /* 上下のパディングを10pxに設定 */
+   position: relative;     /* 要素の位置を相対位置に設定 */
+   top: 0;                 /* 要素の上部位置を0に設定 */
+   left: 0;                /* 要素の左位置を0に設定 */
 }
 
-.menu:hover{
-   overflow: visible;
+.menu:hover {
+   overflow: visible;  /* ホバー時にオーバーフローが可視化されるように設定 */
 }
 /*ナビゲーション部分ここまで*/
