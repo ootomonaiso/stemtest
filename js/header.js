@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const headerContainer = document.getElementById('header-container');
-    const footerContainer = document.getElementById('footer-container');
+    const headercontainer = document.getElementById('header-container');
+    const footerCcontainer = document.getElementById('footer-container');
 
     const HeaderUrl = 'https://ootomonaiso.github.io/stemtest/header.html';
     const FooterUrl = 'https://ootomonaiso.github.io/stemtest/footer.html';
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(HeaderUrl) // PC版のみ
         .then(response => response.text())
         .then(html => {
-            headerContainer.innerHTML = html; // コンテナに内容を挿入
+            headercontainer.innerHTML = html; // コンテナに内容を挿入
         })
         .catch(error => console.error('Header fetch error:', error));
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(FooterUrl) // PC版のみ
         .then(response => response.text())
         .then(html => {
-            footerContainer.innerHTML = html; // コンテナに内容を挿入
+            footercontainer.innerHTML = html; // コンテナに内容を挿入
         })
         .catch(error => console.error('Footer fetch error:', error));
 });
