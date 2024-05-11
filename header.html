@@ -1,18 +1,26 @@
+
 <header class="header">
     <div class="header-top">
         <h1>
             <a href="index.html">
-                <div class="">&nbsp;愛知県立愛知総合工科高等学校
-                STEM研究部</div>
+                <big>&nbsp;愛知県立愛知総合工科高等学校
+                    <ruby>STEM<rt>ステム</rt></ruby>研究部
+                </big>
+                <br>
                 <small>&nbsp; Aichi High School of Technology and Engineering STEM Research Club</small>
             </a>
         </h1>
-        <div class="sub-menu">
+        <div class="menu-icon" onclick="toggleSubMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="sub-menu" id="sub-menu">
             <a href="stem_access.html">アクセス</a>
             <a href="stem_history.html">STEM-History</a>
-            <a href="stem_join.html"><small>入部希望（進学希望）の方へ</small></a>
-            <a href="stem_member.html"><small>部員の方へ</small></a>
-            <a href="stem_contact.html"><small>お問い合わせ</small></a>
+            <a href="stem_join.html">入部希望（進学希望）の方へ</a>
+            <a href="stem_member.html">部員の方へ</a>
+            <a href="stem_contact.html">お問い合わせ</a>
         </div>
     </div>
 
@@ -26,3 +34,10 @@
         </div>
     </div>
 </header>
+
+<script>
+    function toggleSubMenu() {
+        var subMenu = document.getElementById('sub-menu');
+        subMenu.style.display = (subMenu.style.display === 'block') ? 'none' : 'block';
+    }
+</script>
