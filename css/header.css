@@ -1,53 +1,86 @@
-/* ヘッダー全体の設定 */
-header {
-   display: flex;                  /* ヘッダー全体をフレックスボックスとして設定 */
-   flex-direction: column;         /* 縦方向に要素を配置 */
-   padding: 10px;                  /* 全体のパディング */
-   border-bottom: 1px solid #ccc;  /* セクションの境界を示すための線 */
-}
+        /* ヘッダー全体の設定 */
+        .header {
+         display: flex;                  /* ヘッダー全体をフレックスボックスとして設定 */
+         flex-direction: column;         /* 縦方向に要素を配置 */
+         padding: 10px;                  /* 全体のパディング */
+         border-bottom: 1px solid #ccc;  /* セクションの境界を示すための線 */
+     }
 
-/* ヘッダーの上部の設定 */
-.header-top {
-   display: flex;                  /* フレックスボックスで要素を横に配置 */
-   justify-content: space-between; /* 左右に配置 */
-   align-items: center;            /* 垂直方向で中央に揃える */
-   padding: 10px;                  /* 全体のパディング */
-}
+     /* ヘッダーの上部の設定 */
+     .header-top {
+         display: flex;                  /* フレックスボックスで要素を横に配置 */
+         justify-content: space-between; /* 左右に配置 */
+         align-items: center;            /* 垂直方向で中央に揃える */
+         padding: 10px;                  /* 全体のパディング */
+     }
 
-/* h1要素の設定 */
-.header-top h1 {
-   font-size: 1.5em;               /* フォントサイズを設定 */
-   margin: 0;                      /* デフォルトのマージンを取り除く */
-   text-align: left;               /* 左揃え */
-}
+     /* h1要素の設定 */
+     .header-top h1 {
+         font-size: 1.5em;               /* フォントサイズを設定 */
+         margin: 0;                      /* デフォルトのマージンを取り除く */
+         text-align: left;               /* 左揃え */
+     }
 
-/* サブメニューの設定 */
-.sub-menu {
-   display: flex;                  /* フレックスボックスで要素を横に配置 */
-   justify-content: flex-end;      /* 要素を右端に揃える */
-   align-items: center;            /* 垂直方向で中央に揃える */
-   padding: 0;                     /* パディングを取り除く */
-}
+     /* ハンバーガーメニューのアイコン */
+     .menu-icon {
+         display: none;                  /* デフォルトでは非表示 */
+     }
 
-/* サブメニューのリンクの設定 */
-.sub-menu a {
-   text-decoration: none;          /* テキストの下線を取り除く */
-   color: #036EB8;                 /* テキストの色 */
-   padding: 0 10px;                /* 左右のパディング */
-}
+     /* サブメニューの設定 */
+     .sub-menu {
+         display: flex;                  /* フレックスボックスで要素を横に配置 */
+         justify-content: flex-end;      /* 要素を右端に揃える */
+         align-items: center;            /* 垂直方向で中央に揃える */
+         padding: 0;                     /* パディングを取り除く */
+     }
 
-/* ヘッダーの下部の設定 */
-.header-bottom {
-   display: flex;                  /* フレックスボックスで要素を横に配置 */
-   justify-content: space-between; /* 要素を左右に配置 */
-   padding: 10px;                  /* 全体のパディング */
-   border-top: 1px solid #ccc;     /* セクションの境界を示すための線 */
-}
+     /* サブメニューのリンクの設定 */
+     .sub-menu a {
+         text-decoration: none;          /* テキストの下線を取り除く */
+         color: #036EB8;                 /* テキストの色 */
+         padding: 0 10px;                /* 左右のパディング */
+     }
 
-/* メニューのリンクの設定 */
-.menu a {
-   text-decoration: none;          /* テキストの下線を取り除く */
-   color: #036EB8;                 /* テキストの色 */
-   padding: 10px;                  /* パディング */
-   margin: 0 10px;                 /* 左右の余白 */
-}
+     /* ヘッダーの下部の設定 */
+     .header-bottom {
+         display: flex;                  /* フレックスボックスで要素を横に配置 */
+         justify-content: space-between; /* 要素を左右に配置 */
+         padding: 10px;                  /* 全体のパディング */
+         border-top: 1px solid #ccc;     /* セクションの境界を示すための線 */
+     }
+
+     /* メニューのリンクの設定 */
+     .menu a {
+         text-decoration: none;          /* テキストの下線を取り除く */
+         color: #036EB8;                 /* テキストの色 */
+         padding: 10px;                  /* パディング */
+         margin: 0 10px;                 /* 左右の余白 */
+     }
+
+     /* ハンバーガーメニューのアイコンのスタイル */
+     .menu-icon {
+         cursor: pointer;                /* カーソルをポインターに変更 */
+         display: none;                  /* デフォルトでは非表示 */
+     }
+
+     /* メニューが表示される場合 */
+     .menu-icon:checked + .sub-menu {
+         display: block;                 /* メニューを表示 */
+     }
+
+     /* メニューが非表示の場合 */
+     .menu-icon:not(:checked) + .sub-menu {
+         display: none;                  /* メニューを非表示 */
+     }
+
+     @media (max-width: 768px) {         /* 768px以下の場合 */
+         /* ハンバーガーメニューのアイコンの表示 */
+         .menu-icon {
+             display: block;             /* ブロック要素として表示 */
+         }
+
+         /* サブメニューの非表示 */
+         .sub-menu {
+             display: none;              /* メニューを非表示 */
+         }
+     }
