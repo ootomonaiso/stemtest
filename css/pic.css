@@ -1,0 +1,16 @@
+/*youtube動画窓に適用するスタイル*/
+.youtube-window {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px;
+}
+.youtube-window iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

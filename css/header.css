@@ -28,11 +28,6 @@
    font-size: 0.8em;
 }
 
-/* ハンバーガーメニューのアイコン */
-.menu-icon {
-   display: none;
-}
-
 /* サブメニューの設定 */
 .sub-menu {
    display: none;

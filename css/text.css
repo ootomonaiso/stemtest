@@ -17,3 +17,7 @@ p {
 a {
     font-family: '游ゴシック Medium', sans-serif;
 }
+
+h1{
+    float: left;
+}
