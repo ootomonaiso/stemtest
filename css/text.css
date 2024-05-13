@@ -10,6 +10,12 @@ body{
     line-height: 1.7;
 }
 
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px; /* 適宜調整 */
+}
+
 p {
     font-family: '游ゴシック Medium', sans-serif;
 }

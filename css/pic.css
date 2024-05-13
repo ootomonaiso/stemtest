@@ -14,3 +14,18 @@
     width: 100%;
     height: 100%;
 }
+
+/*googleカレンダー用の要素*/
+.google_karendar {
+    text-align: center;
+    margin: 16px auto;
+    width: calc(50% - 20px);
+ }
+ 
+ .google_karendar iframe {
+    border-width: 0;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    width: calc(50% - 20px);
+ }
