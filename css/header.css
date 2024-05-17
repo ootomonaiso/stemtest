@@ -1,68 +1,110 @@
-/* styles.css */
+header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+	background-color: rgb(55, 82, 105);
+	z-index: 1;
+}
 
-/* ヘッダー全体の設定 */
 .header {
-   display: flex;
-   flex-direction: column;
-   padding: 10px;
-   border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 10px;
 }
 
-/* ヘッダーの上部の設定 */
-.header-top {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 10px;
+.header-title {
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	padding: 10px 0;
 }
 
-/* h1要素の設定 */
-.header-top h1 {
-   font-size: 1.5em;
-   margin: 0;
-   text-align: left;
+.header-hamburger {
+	position: relative;
+	display: none;
+	width: 40px;
+	height: 40px;
+	z-index: 999;
+	cursor: pointer;
 }
 
-/* small要素の設定 */
-.header-top small {
-   font-size: 0.8em;
+.header-hamburger__line {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: white;
+	transition: all .5s;
 }
 
-/* サブメニューの設定 */
-.sub-menu {
-   display: none;
-   position: absolute;
-   top: 100%;
-   left: 0;
-   background-color: #f9f9f9;
-   min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-   z-index: 1;
+.header-hamburger__line:nth-of-type(1) {
+	top: 20%;
+	translate: 0 -50%;
 }
 
-/* サブメニューのリンクの設定 */
-.sub-menu a {
-   display: block;
-   color: black;
-   padding: 12px 16px;
-   text-decoration: none;
+.header-hamburger__line:nth-of-type(2) {
+	top: 50%;
+	translate: 0 -50%;
 }
 
-/* ヘッダーの下部の設定 */
-.header-bottom {
-   display: flex;
-   justify-content: space-between;
-   padding: 10px;
-   border-top: 1px solid #ccc;
+.header-hamburger__line:nth-of-type(3) {
+	top: 80%;
+	translate: 0 -50%;
 }
 
-/* メニューのリンクの設定 */
-.menu a {
-   text-decoration: none;
-   color: #036EB8;
-   padding: 10px;
-   margin: 0;
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
+body.show-nav .header-hamburger__line:nth-of-type(1) {
+	top: 50%;
+	translate: 0 -50%;
+	rotate: 45deg;
+}
+
+body.show-nav .header-hamburger__line:nth-of-type(2) {
+	top: 50%;
+	translate: 0 -50%;
+	opacity: 0;
+}
+
+body.show-nav .header-hamburger__line:nth-of-type(3) {
+	top: 50%;
+	translate: 0 -50%;
+	rotate: -45deg;
+}
+
+.nav {
+	display: flex;
+	width: 100%;
+	max-width: calc(1024px * 0.5);
+	/* background-color: rgb(83, 115, 145); */
+}
+
+.nav-list {
+	display: flex;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.nav__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	border-right: solid 1px rgb(37, 60, 80);
+	transition: background-color .2s;
+}
+
+.nav__item:first-of-type {
+	border-left: solid 1px rgb(37, 60, 80);
+}
+
+.nav__item:hover {
+	background-color: rgb(37, 60, 80);
 }
